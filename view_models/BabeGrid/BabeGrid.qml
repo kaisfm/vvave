@@ -69,7 +69,7 @@ Maui.Page
 
         flickableDirection: Flickable.AutoFlickDirection
 
-        snapMode: GridView.SnapToRow
+        snapMode: GridView.NoSnap
         //        flow: GridView.FlowTopToBottom
         //        maximumFlickVelocity: albumSize*8
 

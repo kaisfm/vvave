@@ -23,8 +23,8 @@
 #include "services/musicbrainzService.h"
 #include "services/deezerService.h"
 
-#include "qgumbodocument.h"
-#include "qgumbonode.h"
+//#include "qgumbodocument.h"
+//#include "qgumbonode.h"
 
 Pulpo::Pulpo(const BAE::DB &song,QObject *parent)
     : QObject(parent), track(song) {}
@@ -75,22 +75,22 @@ QStringList Pulpo::queryHtml(const QByteArray &array, const QString &className)
 {
     QStringList res;
 
-    auto doc = QGumboDocument::parse(array);
-    auto root = doc.rootNode();
+//    auto doc = QGumboDocument::parse(array);
+//    auto root = doc.rootNode();
 
-    auto nodes = root.getElementsByTagName(HtmlTag::TITLE);
-    Q_ASSERT(nodes.size() == 1);
+//    auto nodes = root.getElementsByTagName(HtmlTag::TITLE);
+//    Q_ASSERT(nodes.size() == 1);
 
-    auto title = nodes.front();
-    qDebug() << "title is: " << title.innerText();
+//    auto title = nodes.front();
+//    qDebug() << "title is: " << title.innerText();
 
-    auto container = root.getElementsByClassName(className);
-    //    if(container.size() == 1)
-    //        return res;
+//    auto container = root.getElementsByClassName(className);
+//    //    if(container.size() == 1)
+//    //        return res;
 
-    auto children = container.front().children();
-    for(const auto &i : children)
-        res << i.innerText();
+//    auto children = container.front().children();
+//    for(const auto &i : children)
+//        res << i.innerText();
 
 
     return res;

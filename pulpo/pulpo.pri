@@ -34,4 +34,4 @@ INCLUDEPATH += \
     $$PWD \
     $$PWD/services \
 
-include($$PWD/QGumboParser/QGumboParser.pri)
+#include($$PWD/QGumboParser/QGumboParser.pri)
