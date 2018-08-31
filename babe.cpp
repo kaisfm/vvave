@@ -586,7 +586,7 @@ QString Babe::fetchCoverArt(DB &song)
 
     connect(&timer, &QTimer::timeout, &loop, &QEventLoop::quit);
 
-    connect(&pulpo, &Pulpo::infoReady, [&](const BAE::DB &track,const PULPO::RESPONSE  &res)
+    connect(pulpo, &Pulpo::infoReady, [&](const BAE::DB &track,const PULPO::RESPONSE  &res)
     {
         Q_UNUSED(track);
         if(!res[PULPO::ONTOLOGY::ALBUM][PULPO::INFO::ARTWORK].isEmpty())
@@ -597,7 +597,7 @@ QString Babe::fetchCoverArt(DB &song)
         loop.quit();
     });
 
-    pulpo.feed(song, PULPO::RECURSIVE::OFF);
+    pulpo->feed(song, PULPO::RECURSIVE::OFF);
 
     timer.start();
     loop.exec();
