@@ -25,26 +25,17 @@
 
 BabeSettings::BabeSettings(QObject *parent) : QObject(parent)
 {
-
     this->connection = new CollectionDB(this);
     this->brainDeamon = new Brain;
     this->ytFetch = new youtubedl(this);
     this->babeSocket = new Socket(static_cast<quint16>(BAE::BabePort.toInt()), this);
 
-
-    qDebug() << "Getting collectionDB info from: " << BAE::CollectionDBPath;
-    qDebug() << "Getting settings info from: " << BAE::SettingPath;
-    qDebug() << "Getting artwork files from: " << BAE::CachePath;
-
 #if (defined (Q_OS_LINUX) && !defined (Q_OS_ANDROID))
-    const auto notifyDir = BAE::NotifyDir;
-
-    if(!BAE::fileExists(notifyDir+"/vvave.notifyrc"))
+    if(!BAE::fileExists(BAE::NotifyDir+"/vvave.notifyrc"))
     {
-        bDebug::Instance()->msg("The Knotify file does not exists, going to create it");
         QFile knotify(":/assets/vvave.notifyrc");
 
-        if(knotify.copy(notifyDir+"/vvave.notifyrc"))
+        if(knotify.copy(BAE::NotifyDir+"/vvave.notifyrc"))
             bDebug::Instance()->msg("the knotify file got copied");
     }
 #endif    
@@ -80,15 +71,14 @@ BabeSettings::BabeSettings(QObject *parent) : QObject(parent)
         emit this->refreshATable(type);
     });
 
-    connect(&this->fileLoader, &FileLoader::finished,[this](int size)
+    connect(&this->fileLoader, &FileLoader::finished, [this](int size)
     {
-        if(size > 0)
-        {
-            bDebug::Instance()->msg("Finished inserting into DB "+QString::number(size)+" tracks");
-            this->startBrainz(true, BAE::SEG::HALF);
+        bDebug::Instance()->msg("Finished inserting into DB "+QString::number(size)+" tracks");
 
-        }else
-            this->startBrainz(BAE::loadSettings("BRAINZ", "BABE", false).toBool(), BAE::SEG::TWO);
+        if(size > 0)
+            this->startBrainz(true, BAE::SEG::HALF);
+        else
+            this->startBrainz(BAE::loadSettings("AUTO", "BRAINZ", true).toBool(), BAE::SEG::TWO);
 
         emit refreshTables(size);
     });
@@ -115,16 +105,9 @@ void BabeSettings::fetchYoutubeTrack(const QString &message)
     this->ytFetch->fetch(message);
 }
 
-void BabeSettings::checkCollectionBrainz(const bool &state)
-{
-    bDebug::Instance()->msg("BRAINZ STATE<<"+state);
-    this->startBrainz(state, BAE::SEG::THREE);
-}
-
 void BabeSettings::startBrainz(const bool &on, const uint &speed)
 {
-    bDebug::Instance()->msg("Starting Brainz with interval: " + QString::number(BAE::SEG::ONEHALF));
-
+    qDebug()<< "Starting Brainz with interval: "<< speed << on;
     this->brainDeamon->setInterval(speed);
 
     if(on)
@@ -141,5 +124,6 @@ void BabeSettings::populateDB(const QStringList &paths)
     for(auto path : newPaths)
         if(path.startsWith("file://"))
             path.replace("file://", "");
+
     fileLoader.requestPaths(newPaths);
 }

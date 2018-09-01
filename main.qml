@@ -51,7 +51,6 @@ Maui.ApplicationWindow
     /***************************************************/
     /******************** PLAYBACK ********************/
     /*************************************************/
-
     property bool isShuffle: bae.loadSetting("SHUFFLE","PLAYBACK", false) == "true" ? true : false
     property var currentTrack: ({
                                     babe: "0",
@@ -112,41 +111,13 @@ Maui.ApplicationWindow
     property bool isLinked: false
     property bool isServing: false
 
-    /* ANDROID THEMING*/
-
-    Material.theme: Material.Light
-    Material.accent: babeColor
-    Material.background: viewBackgroundColor
-    Material.primary: backgroundColor
-    Material.foreground: textColor
-
-
-    /***************************************************/
-    /******************** UI UNITS ********************/
-    /*************************************************/
-
-
     property bool focusMode : false
+    property bool selectionMode : false
 
     /***************************************************/
     /******************** UI COLORS *******************/
     /*************************************************/
     property string babeColor: bae.babeColor()
-
-    readonly property string darkBackgroundColor: "#303030"
-    readonly property string darkTextColor: "#FAFAFA"
-    readonly property string darkHighlightColor: "#29B6F6"
-    readonly property string darkHighlightedTextColor: darkTextColor
-    readonly property string darkViewBackgroundColor: "#212121"
-    readonly property string darkDarkColor: "#191919"
-    readonly property string darkButtonBackgroundColor :  "#191919"
-
-
-    /***************************************************/
-    /**************************************************/
-    /*************************************************/
-    property bool selectionMode : false
-
 
     /*SIGNALS*/
     signal missingAlert(var track)
@@ -308,7 +279,7 @@ Maui.ApplicationWindow
         id: babeConsole
     }
 
-    menuDrawer.bannerImageSource: "qrc:/assets/banner.svg"
+//    menuDrawer.bannerImageSource: "qrc:/assets/banner.svg"
 
     menuDrawer.actions: [
 
@@ -427,23 +398,24 @@ Maui.ApplicationWindow
         {
             text: qsTr("Settings...")
             iconName: "view-media-config"
-            Kirigami.Action
-            {
-                text: "Brainz"
+            //            Kirigami.Action
+            //            {
+            //                text: "Brainz"
 
-                Kirigami.Action
-                {
-                    id: brainzToggle
-                    text: checked ? "Turn OFF" : "Turn ON"
-                    checked: false
-                    checkable: true
-                    onToggled:
-                    {
-                        bae.saveSetting("BRAINZ", checked === true ? true : false, "BABE")
-                        bae.brainz(checked === true ? true : false)
-                    }
-                }
-            }
+            //                Kirigami.Action
+            //                {
+            //                    id: brainzToggle
+            //                    text: checked ? "Turn OFF" : "Turn ON"
+            //                    checked: bae.brainzState()
+            //                    checkable: true
+            //                    onToggled:
+            //                    {
+            //                        checked = !checked
+            //                        bae.saveSetting("AUTO", checked, "BRAINZ")
+            ////                        bae.brainz(checked)
+            //                    }
+            //                }
+            //            }
 
             Kirigami.Action
             {
@@ -662,7 +634,8 @@ Maui.ApplicationWindow
         floatingBar: true
         footBarOverlap: true
 
-        footBar.visible: !mainlistEmpty
+        footBarVisible: !mainlistEmpty
+        headBarVisible: !mainlistEmpty
 
         footBar.leftContent: Label
         {
@@ -758,7 +731,27 @@ Maui.ApplicationWindow
                 id: swipeView
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Component.onCompleted: contentItem.interactive = isMobile
+                interactive: isMobile
+                //                contentItem: ListView
+                //                {
+                //                    model: swipeView.contentModel
+                //                    interactive: swipeView.interactive
+                //                    currentIndex: swipeView.currentIndex
+
+                //                    spacing: swipeView.spacing
+                //                    orientation: swipeView.orientation
+                //                    snapMode: ListView.SnapOneItem
+                //                    boundsBehavior: Flickable.StopAtBounds
+
+                //                    highlightRangeMode: ListView.StrictlyEnforceRange
+                //                    preferredHighlightBegin: 0
+                //                    preferredHighlightEnd: 0
+                //                    highlightMoveDuration: 250
+                //                    //                    min:10
+
+                //                    maximumFlickVelocity: 10 * (swipeView.orientation ===
+                //                                               Qt.Horizontal ? width : height)
+                //                }
 
                 currentIndex: currentView
 
@@ -804,19 +797,7 @@ Maui.ApplicationWindow
                         onRowClicked: Player.addTrack(track)
                         onPlayTrack: Player.quickPlay(track)
 
-                        onAlbumCoverClicked:
-                        {
-                            var query = Q.GET.albumTracks_.arg(album)
-                            query = query.arg(artist)
-
-                            albumsView.table.headBarTitle = album
-                            albumsView.populateTable(query)
-
-                            var tagq = Q.GET.albumTags_.arg(album)
-                            tagq = tagq.arg(artist)
-
-                            albumsView.tagBar.populate(bae.get(tagq))
-                        }
+                        onAlbumCoverClicked: albumsView.populateTable(album, artist)
 
                         onAlbumCoverPressedAndHold:
                         {
@@ -862,16 +843,7 @@ Maui.ApplicationWindow
                         target: artistsView
                         onRowClicked: Player.addTrack(track)
                         onPlayTrack: Player.quickPlay(track)
-                        onAlbumCoverClicked:
-                        {
-                            var query = Q.GET.artistTracks_.arg(artist)
-                            artistsView.table.headBarTitle = artist
-                            artistsView.populateTable(query)
-
-                            var tagq = Q.GET.artistTags_.arg(artist)
-
-                            artistsView.tagBar.populate(bae.get(tagq))
-                        }
+                        onAlbumCoverClicked: artistsView.populateTable(undefined, artist)
 
                         onAlbumCoverPressedAndHold:
                         {
@@ -1025,8 +997,6 @@ Maui.ApplicationWindow
                     onRateClicked: H.rateIt(paths, rate)
 
                     onColorClicked: H.moodIt(paths, color)
-
-
                 }
             }
         }
@@ -1053,41 +1023,10 @@ Maui.ApplicationWindow
         }
     }
 
-    function switchColorScheme(variant)
-    {
-        bae.saveSetting("THEME", variant, "BABE")
-
-        if(variant === "Light")
-        {
-            backgroundColor = Kirigami.Theme.backgroundColor
-            textColor = Kirigami.Theme.textColor
-            highlightColor = Kirigami.Theme.highlightColor
-            highlightedTextColor = Kirigami.Theme.highlightedTextColor
-            buttonBackgroundColor = Kirigami.Theme.buttonBackgroundColor
-            viewBackgroundColor = Kirigami.Theme.viewBackgroundColor
-            altColor = Kirigami.Theme.complementaryBackgroundColor
-            babeColor = bae.babeColor()
-
-        }else if(variant === "Dark")
-        {
-            backgroundColor = darkBackgroundColor
-            textColor = darkTextColor
-            highlightColor = darkHighlightColor
-            highlightedTextColor = darkHighlightedTextColor
-            buttonBackgroundColor = darkButtonBackgroundColor
-            viewBackgroundColor = darkViewBackgroundColor
-            altColor = darkDarkColor
-        }
-    }
-
     Component.onCompleted:
     {
-        var style = bae.loadSetting("THEME", "BABE", "Dark")
-        if(isAndroid)
-        {
-            switchColorScheme(style)
-            Maui.Android.statusbarColor(backgroundColor, false)
-        }
+        //        if(isAndroid)
+        //            switchColorScheme(colorScheme.Dark)
     }
 
 
