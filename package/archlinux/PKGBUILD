@@ -1,0 +1,37 @@
+# Maintainer: kaiman <kaisfm at sohu dot com>
+ 
+pkgname=vvave-git
+pkgver=0
+pkgrel=
+pkgdesc='Tiny Qt Music Player to keep your favorite songs at hand'
+arch=(x86_64)
+url='https://vvave.kde.org/'
+license=(GPL3)
+depends=(ki18n knotifications qt5-webengine qt5-websockets taglib)
+makedepends=(extra-cmake-modules git python)
+optdepends=('youtube-dl: youtube support')
+provides=("${pkgname%-*}")
+conflicts=("${pkgname%-*}" 'babe-qt')
+replaces=('babe-qt')
+source=('git+git://anongit.kde.org/vvave.git')
+sha256sums=('SKIP')
+
+pkgver() {
+  ln -s vvave vvave-git
+}
+
+prepare() {
+  cd vvave-git
+  mkdir -p build
+}
+
+build() {
+  cd vvave-git/build
+  gmake -o Makefile ../vvave.pro
+  make
+}
+ 
+package() {
+  cd vvave-git/build
+  make DESTDIR="$pkgdir" install
+}
