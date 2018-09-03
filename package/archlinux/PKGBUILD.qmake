@@ -1,37 +1,39 @@
 # Maintainer: kaiman <kaisfm at sohu dot com>
  
-pkgname=vvave-git
-pkgver=0
-pkgrel=
+pkgname=vvave
+pkgver=git
+pkgrel=0
 pkgdesc='Tiny Qt Music Player to keep your favorite songs at hand'
 arch=(x86_64)
 url='https://vvave.kde.org/'
 license=(GPL3)
 depends=(ki18n knotifications qt5-webengine qt5-websockets taglib)
-makedepends=(extra-cmake-modules git python)
+makedepends=(git python)
 optdepends=('youtube-dl: youtube support')
 provides=("${pkgname%-*}")
 conflicts=("${pkgname%-*}" 'babe-qt')
 replaces=('babe-qt')
-source=('git+git://anongit.kde.org/vvave.git')
+source=('git://anongit.kde.org/vvave.git')
 sha256sums=('SKIP')
 
-pkgver() {
-  ln -s vvave vvave-git
-}
+#pkgver() {
+#  cd $pkgname
+#  git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g;s/v//g'
+#}
 
 prepare() {
-  cd vvave-git
-  mkdir -p build
+  rm -rf $pkgname
+  git clone --recurse-submodules $source
+  mkdir -p $pkgname/build
 }
 
 build() {
-  cd vvave-git/build
-  gmake -o Makefile ../vvave.pro
+  cd $pkgname/build
+  qmake -o Makefile ../vvave.pro
   make
 }
  
 package() {
-  cd vvave-git/build
-  make DESTDIR="$pkgdir" install
+  cd $pkgname/build
+  make INSTALL_ROOT="$pkgdir" install
 }
