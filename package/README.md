@@ -5,7 +5,7 @@ Making Package for same distro
 
 archlinux, manjaro ...
 
-My packaging configuration is done on Manjaro KDE, which provides two options for Qmake and CMake. The version number is more casual, after all, not officially released. For different scenarios, simply run Makepkg-p pkgbuild.qmake or makepkg-p pkgbuild.cmake
+My packaging configuration is done on Manjaro KDE, which provides two options for Qmake and CMake. The version number is more casual, after all, not officially released. For different scenarios, simply run makepkg -p  PKGBUILD.qmake or makepkg -p PKGBUILD.cmake
 
 ## Debian Distributions
 
