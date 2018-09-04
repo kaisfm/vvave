@@ -36,7 +36,7 @@
   <summary xml:lang="x-test">xxPlay your music collectionxx</summary>
   <summary xml:lang="zh-CN">简洁的音乐播放器</summary>
   <description>
-    <p> A simple music player that should be easy to use. It does not require any configuration before one can use it. </p>
+    <p> Tiny Qt Music Player to keep your favorite songs at hand. </p>
     <p xml:lang="ast">Un reproductor cenciellu de música que debería ser fácil d'usar. Nun rique configuración dala enantes que puea usase.</p>
     <p xml:lang="ca">Un reproductor de música senzill que hauria de ser fàcil d'utilitzar. No requereix cap configuració abans de poder utilitzar-lo.</p>
     <p xml:lang="ca-valencia">Un reproductor de música senzill que hauria de ser fàcil d'utilitzar. No requereix cap configuració abans de poder utilitzar-lo.</p>
@@ -52,9 +52,9 @@
     <p xml:lang="sv">En enkel musikspelare som ska vara lättanvänd. Den kräver inga inställningar innan man kan använda den.</p>
     <p xml:lang="uk">Простий у користуванні музичний програвач. Не потребує налаштовування перед користуванням.</p>
     <p xml:lang="x-test">xxA simple music player that should be easy to use. It does not require any configuration before one can use it.xx</p>
-    <p xml:lang="zh-CN">一个简单易用的音乐播放器，不需要任何配置就能够使用。</p>
+    <p xml:lang="zh-CN">一个让你随时享受喜爱的音乐的简洁音乐播放器。</p>
   </description>
-  <url type="homepage">https://community.kde.org/Elisa</url>
+  <url type="homepage">https://vvave.kde.org/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=vvave</url>
   <url type="donation">https://www.kde.org/community/donations</url>
   <url type="help">https://docs.kde.org/trunk5/en/extragear-multimedia/vvave/</url>
