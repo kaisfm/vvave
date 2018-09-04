@@ -1,5 +1,5 @@
 # Package
-Making Package for same distro
+Package for some distributions
 
 ## Archlinux Distributions 
 
