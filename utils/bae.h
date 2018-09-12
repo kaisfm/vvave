@@ -13,10 +13,9 @@
 #include <QScreen>
 #include <QtNetwork>
 #include <QEventLoop>
-#include "../mauikit/src/fm/fmh.h"
-
+//#include "../mauikit/src/fm/fmh.h"
+#include <MauiKit/fmh.h>
 #include <cmath>
-
 
 #define BABE_MAJOR_VERSION 0
 #define BABE_MINOR_VERSION 1
@@ -286,7 +285,7 @@ const QString ArtworkPath = QStandardPaths::writableLocation(QStandardPaths::Gen
 const QString CollectionDBPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)+"/vvave/";
 const QString CachePath = BAE::isMobile() ? BAE::ArtworkPath : QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)+"/vvave/";
 const QString YoutubeCachePath = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)+"/vvave/youtube/";
-const QString NotifyDir = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
+const QString NotifyDir = SettingPath;
 
 const QStringList MusicPaths = QStandardPaths::standardLocations(QStandardPaths::MusicLocation);
 const QStringList DownloadsPaths = QStandardPaths::standardLocations(QStandardPaths::DownloadLocation);

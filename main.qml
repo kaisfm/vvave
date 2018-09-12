@@ -28,7 +28,7 @@ import "utils/Help.js" as H
 import "utils/Player.js" as Player
 
 import org.kde.kirigami 2.2 as Kirigami
-import org.kde.maui 1.0 as Maui
+import org.kde.mauikit 1.0 as Maui
 
 Maui.ApplicationWindow
 {
@@ -117,7 +117,7 @@ Maui.ApplicationWindow
     /***************************************************/
     /******************** UI COLORS *******************/
     /*************************************************/
-    property string babeColor: bae.babeColor()
+    property string babeColor: bae.babeColor() //"#140032"
 
     /*SIGNALS*/
     signal missingAlert(var track)
@@ -179,13 +179,18 @@ Maui.ApplicationWindow
 
     /* UI */
     property bool accent : pageStack.wideMode || (!pageStack.wideMode && pageStack.currentIndex === 1)
+    accentColor: "#212121"
+    headBarFGColor: altColorText
+    headBarBGColor: currentView === viewsIndex.vvave ? "#7e57c2" : accentColor
+    colorSchemeName: "vvave"
+    altColorText: darkTextColor   
 
     headBar.middleContent : [
 
         Maui.ToolButton
         {
             iconName: "view-media-track"
-            iconColor:  accent && currentView === viewsIndex.tracks ? babeColor : textColor
+            iconColor:  accent && currentView === viewsIndex.tracks ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
 
             onClicked:
@@ -201,7 +206,7 @@ Maui.ApplicationWindow
         {
             text: qsTr("Albums")
             iconName: /*"album"*/ "view-media-album-cover"
-            iconColor:  accent && currentView === viewsIndex.albums ? babeColor : textColor
+            iconColor:  accent && currentView === viewsIndex.albums ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
 
             onClicked:
@@ -216,7 +221,7 @@ Maui.ApplicationWindow
         {
             text: qsTr("Artists")
             iconName: "view-media-artist"
-            iconColor:  accent && currentView === viewsIndex.artists ? babeColor : textColor
+            iconColor:  accent && currentView === viewsIndex.artists ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
 
             onClicked:
@@ -231,7 +236,7 @@ Maui.ApplicationWindow
         {
             text: qsTr("Playlists")
             iconName: "view-media-playlist"
-            iconColor:  accent && currentView === viewsIndex.playlists ? babeColor : textColor
+            iconColor:  accent && currentView === viewsIndex.playlists ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
 
             onClicked:
@@ -633,6 +638,7 @@ Maui.ApplicationWindow
 
         floatingBar: true
         footBarOverlap: true
+        altToolBars: true
 
         footBarVisible: !mainlistEmpty
         headBarVisible: !mainlistEmpty
@@ -762,9 +768,6 @@ Maui.ApplicationWindow
                     currentView = currentIndex
                     if (!babeitView.isConnected && currentIndex === viewsIndex.vvave)
                         babeitView.logginDialog.open()
-
-                    if(currentView === viewsIndex.search)
-                        riseContent()
                 }
 
                 TracksView
@@ -805,7 +808,7 @@ Maui.ApplicationWindow
                             query = query.arg(artist)
 
                             var map = bae.get(query)
-                            albumsView.playAlbum(map)
+                            Player.playAll(map)
                         }
 
                         onPlayAll:
@@ -848,9 +851,8 @@ Maui.ApplicationWindow
                         onAlbumCoverPressedAndHold:
                         {
                             var query = Q.GET.artistTracks_.arg(artist)
-
                             var map = bae.get(query)
-                            artistsView.playAlbum(map)
+                            Player.playAll(map)
                         }
 
                         onPlayAll:
@@ -1021,12 +1023,6 @@ Maui.ApplicationWindow
         } else {
             root.showMaximized();
         }
-    }
-
-    Component.onCompleted:
-    {
-        //        if(isAndroid)
-        //            switchColorScheme(colorScheme.Dark)
     }
 
 
