@@ -201,6 +201,7 @@ Maui.ApplicationWindow
             }
 
             text: qsTr("Tracks")
+            tooltipText: pageStack.wideMode ? "" : text
         },
 
         Maui.ToolButton
@@ -216,6 +217,7 @@ Maui.ApplicationWindow
                 albumsView.currentIndex = 0
                 currentView = viewsIndex.albums
             }
+            tooltipText: pageStack.wideMode ? "" : text
         },
 
         Maui.ToolButton
@@ -231,6 +233,7 @@ Maui.ApplicationWindow
                 artistsView.currentIndex = 0
                 currentView = viewsIndex.artists
             }
+            tooltipText: pageStack.wideMode ? "" : text
         },
 
         Maui.ToolButton
@@ -245,6 +248,7 @@ Maui.ApplicationWindow
                 pageStack.currentIndex = 1
                 currentView = viewsIndex.playlists
             }
+            tooltipText: pageStack.wideMode ? "" : text
         }
     ]
 
