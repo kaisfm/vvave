@@ -67,12 +67,12 @@ if (ANDROID)
 else()
     find_package(Taglib REQUIRED)
     find_package(Qt5 REQUIRED COMPONENTS WebEngine)
-    find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config)
+    find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS I18n Notifications Config KIO)
     target_sources(vvave PRIVATE
         kde/mpris2.cpp
         kde/notify.cpp
         )
-    target_link_libraries(vvave Qt5::WebEngine KF5::ConfigCore KF5::Notifications KF5::I18n Qt5::DBus)
+    target_link_libraries(vvave Qt5::WebEngine KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n Qt5::DBus)
 endif()
 target_include_directories(vvave PRIVATE ${TAGLIB_INCLUDE_DIRS})
 target_link_libraries(vvave Qt5::Network Qt5::Sql Qt5::WebSockets Qt5::Qml Qt5::Xml Qt5::Multimedia Qt5::Widgets ${TAGLIB_LIBRARIES})
