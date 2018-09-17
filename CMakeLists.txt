@@ -71,6 +71,7 @@ else()
     target_sources(vvave PRIVATE
         kde/mpris2.cpp
         kde/notify.cpp
+        kde/maui-style.qrc
         )
     target_link_libraries(vvave Qt5::WebEngine KF5::ConfigCore KF5::Notifications KF5::KIOCore KF5::I18n Qt5::DBus)
 endif()

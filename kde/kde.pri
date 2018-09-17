@@ -12,6 +12,9 @@ SOURCES += \
     $$PWD/notify.cpp \
     $$PWD/mpris2.cpp \
 
+RESOURCES += \
+    $$PWD/qtquickcontrols2.conf
+
 LIBS += -ltag
 
 WEBENGINE_CONFIG+=proprietary_codecs
