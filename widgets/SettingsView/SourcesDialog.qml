@@ -72,12 +72,12 @@ BabePopup
                     if(bae.defaultSources().indexOf(url)<0)
                     {
                         pathToRemove = url
-                        confirmationDialog.message = "Are you sure you want to remove the source: \n "+url
+                        confirmationDialog.message = qsTr("Are you sure you want to remove the source: \n ") + rl
                     }
                     else
                     {
                         pathToRemove = ""
-                        confirmationDialog.message = url+"\nis a default source and cannot be removed"
+                        confirmationDialog.message = url + qsTr("\nis a default source and cannot be removed")
                     }
 
                     confirmationDialog.open()

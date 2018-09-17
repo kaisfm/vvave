@@ -18,7 +18,7 @@ Item
 
     Text
     {
-        text: lyrics || "Nothing here"
+        text: lyrics || qsTr("Nothing here")
         color: foregroundColor
         font.pointSize: fontSizes.big
         horizontalAlignment: Qt.AlignHCenter

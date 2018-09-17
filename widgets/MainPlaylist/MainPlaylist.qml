@@ -320,8 +320,8 @@ Maui.Page
                     menuItemVisible: false
                     holder.emoji: "qrc:/assets/Radio.png"
                     holder.isMask: false
-                    holder.title : "Meh!"
-                    holder.body: "Start putting together your playlist!"
+                    holder.title : qsTr("Meh!")
+                    holder.body: qsTr("Start putting together your playlist!")
                     holder.emojiSize: iconSizes.huge
                     onRowClicked: play(index)
 

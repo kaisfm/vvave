@@ -14,22 +14,22 @@ BabeMenu
     signal sortBy(string text)
     MenuItem
     {
-        text: "Artist"
+        text: qsTr("Artist")
         onTriggered: sortBy("artist")
     }
     MenuItem
     {
-        text: "Album"
+        text: qsTr("Album")
         onTriggered: sortBy("album")
     }
     MenuItem
     {
-        text: "Genre"
+        text: qsTr("Genre")
         onTriggered: sortBy("genre")
     }
     MenuItem
     {
-        text: "Stars"
+        text: qsTr("Stars")
         onTriggered: sortBy("stars")
     }
 }

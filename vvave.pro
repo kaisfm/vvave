@@ -64,8 +64,25 @@ SOURCES += main.cpp \
     settings/fileloader.cpp \
     services/web/Spotify/spotify.cpp
 
+lupdate_only {
+    SOURCES += ./*.qml \
+               mauikit/src/controls/*.qml \
+               mauikit/src/fm/*.qml \
+               services/local/*.qml \
+               services/web/*.qml \
+               view_models/BabeTable/*.qml \
+               widgets/*.qml \
+               widgets/MainPlaylist/*.qml \
+               widgets/PlaylistsView/*.qml \
+               widgets/SettingsView/*.qml \
+               widgets/SearchView/*.qml \
+               utils/*.js
+}
+
+TRANSLATIONS += translations/zh_CN.ts
 
 RESOURCES += qml.qrc \
+             translations/translations.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =

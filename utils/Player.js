@@ -257,7 +257,7 @@ function addToPlaylist(urls, playlist)
     if(urls.length > 0)
     {
         bae.trackPlaylist(urls, playlist)
-        bae.notify(playlist, urls.length + " tracks added to the playlist:\n"+urls.join("\n"))
+        bae.notify(playlist, urls.length + qsTr(" tracks added to the playlist:\n") + urls.join("\n"))
     }
 }
 

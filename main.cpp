@@ -73,6 +73,13 @@ int main(int argc, char *argv[])
 
     Babe bae;
 
+    /* add translator */
+    QString locale = QLocale::system().name();
+    QTranslator translator;
+    if (translator.load(":/translations/" + locale + ".qm"))
+        app.installTranslator(&translator);
+    //qDebug()<<"load translations :/translations/" + locale + ".qm";
+
     /* Services */
     YouTube youtube;
     Spotify spotify;

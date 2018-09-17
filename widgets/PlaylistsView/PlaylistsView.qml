@@ -114,20 +114,20 @@ Kirigami.PageRow
         holder.emoji: "qrc:/assets/Electricity.png"
         holder.isMask: false
         holder.title : playlistViewModel.model.get(playlistViewModel.currentIndex).playlist
-        holder.body: "Your playlist is empty,<br>start adding new music to it"
+        holder.body: qsTr("Your playlist is empty,<br>start adding new music to it")
         holder.emojiSize: iconSizes.huge
 
         headerMenu.menuItem:  [
             MenuItem
             {
                 enabled: !playlistViewModel.model.get(playlistViewModel.currentIndex).playlistIcon
-                text: "Sync tags"
+                text: qsTr("Sync tags")
                 onTriggered: {}
             },
             MenuItem
             {
                 enabled: !playlistViewModel.model.get(playlistViewModel.currentIndex).playlistIcon
-                text: "Play-n-Sync"
+                text: qsTr("Play-n-Sync")
                 onTriggered:
                 {
                     filterList.headerMenu.close()
@@ -137,7 +137,7 @@ Kirigami.PageRow
             MenuItem
             {
                 enabled: !playlistViewModel.model.get(playlistViewModel.currentIndex).playlistIcon
-                text: "Remove playlist"
+                text: qsTr("Remove playlist")
                 onTriggered: removePlaylist()
             }
         ]

@@ -246,8 +246,8 @@ Page
                     headBarTitle: "YouTube"
                     holder.emoji: "qrc:/assets/Astronaut.png"
                     holder.isMask: false
-                    holder.title : "No Results!"
-                    holder.body: "Try with another query"
+                    holder.title : qsTr("No Results!")
+                    holder.body: qsTr("Try with another query")
                     holder.emojiSize: iconSizes.huge
                     coverArtVisible: true
                     trackDuration: true

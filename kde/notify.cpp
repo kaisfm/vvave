@@ -49,10 +49,10 @@ void Notify::notifySong(const BAE::DB &trackMap)
     if(!pixmap.isNull()) notification->setPixmap(pixmap);
     QStringList actions;
 
-    if(track[BAE::KEY::BABE].toInt()==1) actions<<i18n("Un-Babe it  \xe2\x99\xa1");
-    else actions<<i18n("Babe it  \xe2\x99\xa1");
+    if(track[BAE::KEY::BABE].toInt()==1) actions << tr("Un-Babe it  \xe2\x99\xa1");
+    else actions << tr("Babe it  \xe2\x99\xa1");
 
-    actions<<i18n("Skip");
+    actions << tr("Skip");
 
     notification->setActions(actions);
     connect(notification, SIGNAL(activated(uint)), SLOT(actions(uint)));

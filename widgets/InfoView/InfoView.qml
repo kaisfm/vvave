@@ -39,7 +39,7 @@ Page
                 fgColor: darkTextColor
 //                anchors.fill: parent
                 visible: lyricsText.text.length > 0 ? false : true
-                message: "Couldn't find the lyrics!"
+                message: qsTr("Couldn't find the lyrics!")
             }
 
             ScrollView
@@ -82,7 +82,7 @@ Page
             {
                 id: wikiHolder
                 visible: wikiAlbumText.visible && wikiArtistText.visible ? false : true
-                message: "Couldn't find the wiki!"
+                message: qsTr("Couldn't find the wiki!")
             }
 
             ColumnLayout

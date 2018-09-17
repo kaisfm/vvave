@@ -69,8 +69,8 @@ Kirigami.PageRow
 
             holder.emoji: "qrc:/assets/ElectricPlug.png"
             holder.isMask: false
-            holder.title : "Oops!"
-            holder.body: "This list is empty"
+            holder.title : qsTr("Oops!")
+            holder.body: qsTr("This list is empty")
             holder.emojiSize: iconSizes.huge
 
             onRowClicked:

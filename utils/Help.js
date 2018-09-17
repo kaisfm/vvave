@@ -45,7 +45,7 @@ function setStars(stars)
 
 function refreshCollection(size)
 {
-    if(!isMobile && size>0) bae.notify("Collection updated", size+" new tracks added...")
+    if(!isMobile && size>0) bae.notify(qsTr("Collection updated"), size + qsTr(" new tracks added..."))
 
     refreshTracks()
     refreshAlbums()

@@ -107,8 +107,8 @@ ColumnLayout
                 holder.emoji: "qrc:/assets/USB.png"
                 holder.isMask: false
                 holder.title : link.getDeviceName() ? link.getDeviceName() :
-                                                      "Disconnected!"
-                holder.body: "Your linked playlist is empty"
+                                                      qsTr("Disconnected!")
+                holder.body: qsTr("Your linked playlist is empty")
                 holder.emojiSize: iconSizes.huge
 
                 appendBtn.visible: false
@@ -207,33 +207,33 @@ ColumnLayout
         onServerConReady:
         {
             isServing = true
-            H.notify(deviceName, "You're now linked!")
+            H.notify(deviceName, qsTr("You're now linked!"))
         }
 
         onClientConError:
         {
             isLinked = false
-            H.notify("Linking error", "error connecting to server")
+            H.notify(qsTr("Linking error"), qsTr("error connecting to server"))
         }
 
         onDevicesLinked:
         {
             isLinked = true
-            H.notify("Linked!", "The link is ready")
+            H.notify(qsTr("Linked!"), qsTr("The link is ready"))
             refreshPlaylists()
         }
 
         onClientConDisconnected:
         {
             isLinked = false;
-            H.notify("Unlinked!", "The client is disconnected")
+            H.notify(qsTr("Unlinked!"), qsTr("The client is disconnected"))
 
         }
 
         onServerConDisconnected:
         {
             isServing = false;
-            H.notify("Unlinked!", "The server is disconnected")
+            H.notify(qsTr("Unlinked!"), qsTr("The server is disconnected"))
         }
 
         onResponseReady: parseResponse(res)

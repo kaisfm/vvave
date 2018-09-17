@@ -12,14 +12,14 @@ BabeTable
     trackDuration: true
     trackRating: true
     headBarVisible: !holder.visible
-    headBarTitle: count + " tracks"
+    headBarTitle: count + qsTr(" tracks")
     headBarExit: false
     coverArtVisible: false
     sortBy: "album"
     holder.emoji: "qrc:/assets/MusicCloud.png"
     holder.isMask: false
-    holder.title : "No Tracks!"
-    holder.body: "Add new music sources"
+    holder.title : qsTr("No Tracks!")
+    holder.body: qsTr("Add new music sources")
     holder.emojiSize: iconSizes.huge
 
     function populate()

@@ -18,7 +18,7 @@ BabeMenu
 
     MenuItem
     {
-        text: "Queue list"
+        text: qsTr("Queue list")
         onTriggered:
         {
             queueListClicked()
@@ -28,7 +28,7 @@ BabeMenu
 
     MenuItem
     {
-        text: "Save list to..."
+        text: qsTr("Save list to...")
         onTriggered:
         {
             saveListClicked()
@@ -38,14 +38,14 @@ BabeMenu
 
     MenuItem
     {
-        text: "Send list to..."
+        text: qsTr("Send list to...")
     }
 
     MenuSeparator {}
 
     MenuItem
     {
-        text: "Visible info..."
+        text: qsTr("Visible info...")
         onTriggered: {close()}
     }
 
@@ -53,7 +53,7 @@ BabeMenu
 
     MenuItem
     {
-        text: "Sort..."
+        text: qsTr("Sort...")
         onTriggered:
         {
             sortClicked()
@@ -63,7 +63,7 @@ BabeMenu
 
     MenuItem
     {
-        text: qsTr("Selection "+ (selectionMode ? "OFF" : "ON"))
+        text: qsTr("Selection ")+ (selectionMode ? qsTr("OFF") : qsTr("ON"))
         onTriggered: selectionMode = !selectionMode
     }
 

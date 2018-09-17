@@ -74,7 +74,7 @@ BabePopup
 
                 Layout.alignment: Qt.AlignCenter
 
-                placeholderText: "email *"
+                placeholderText: qsTr("email *")
                 color: textColor
                 horizontalAlignment: Text.AlignHCenter
                 Material.accent: babeColor
@@ -91,7 +91,7 @@ BabePopup
                 Layout.fillHeight: true
 
                 Layout.alignment: Qt.AlignCenter
-                placeholderText: email.visible ? "nick *" : "nick or email"
+                placeholderText: email.visible ? qsTr("nick *") : qsTr("nick or email")
                 color: textColor
                 horizontalAlignment: Text.AlignHCenter
                 Material.accent: babeColor
@@ -111,7 +111,7 @@ BabePopup
 
                 Layout.alignment: Qt.AlignCenter
 
-                placeholderText: "password *"
+                placeholderText: qsTr("password *")
                 color: textColor
                 horizontalAlignment: Text.AlignHCenter
                 Material.accent: babeColor
@@ -133,7 +133,7 @@ BabePopup
                     id: name
                     Layout.fillWidth: true
                     Layout.rightMargin: contentMargins/2
-                    placeholderText: "name"
+                    placeholderText: qsTr("name")
                     color: textColor
                     horizontalAlignment: Text.AlignHCenter
                     Material.accent: babeColor
@@ -148,7 +148,7 @@ BabePopup
                     Layout.fillWidth: true
                     Layout.leftMargin: contentMargins/2
 
-                    placeholderText: "lastname"
+                    placeholderText: qsTr("lastname")
                     color: textColor
                     horizontalAlignment: Text.AlignHCenter
                     Material.accent: babeColor
@@ -171,7 +171,7 @@ BabePopup
 
                 id: loginBtn
 
-                text: "Login"
+                text: qsTr("Login")
 
                 Material.accent: babeColor
                 Material.background: backgroundColor
@@ -190,7 +190,7 @@ BabePopup
 
                 id: signUp
 
-                text: "Singup"
+                text: qsTr("Singup")
 
                 Material.accent: babeColor
                 Material.background: babeColor

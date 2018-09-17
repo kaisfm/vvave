@@ -67,56 +67,55 @@ BabeList
 
                 switch(playlist)
                 {
-                case "Artists":
+                case qsTr("Artists"):
                     populateExtra(LINK.FILTER, "select artist as tag from artists", playlist)
                     break
 
-                case "Albums":
+                case qsTr("Albums"):
                     populateExtra(LINK.FILTER, "select album as tag, artist from albums", playlist)
-
                     break
 
-                case "Most Played":
+                case qsTr("Most Played"):
 
                     playlistViewRoot.populate(Q.GET.mostPlayedTracks);
                     break;
 
-                case "Favorites":
+                case qsTr("Favorites"):
 
                     filterList.section.property = "stars"
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case "Recent":
+                case qsTr("Recent"):
 
                     playlistViewRoot.populate(Q.GET.recentTracks);
                     break;
 
-                case "Babes":
+                case qsTr("Babes"):
 
                     playlistViewRoot.populate(Q.GET.babedTracks);
                     break;
 
-                case "Online":
+                case qsTr("Online"):
 
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case "Tags":
+                case qsTr("Tags"):
                     populateExtra(LINK.FILTER, Q.GET.tags, playlist)
                     break;
 
-                case "Relationships":
+                case qsTr("Relationships"):
 
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case "Popular":
+                case qsTr("Popular"):
 
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case "Genres":
+                case qsTr("Genres"):
 
                     populateExtra(LINK.FILTER, Q.GET.genres, playlist)
                     break;

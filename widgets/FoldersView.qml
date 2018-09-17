@@ -40,8 +40,8 @@ StackView
         headBarExitIcon: "go-previous"
         holder.emoji: "qrc:/assets/MusicCloud.png"
         holder.isMask: false
-        holder.title : "No Tracks!"
-        holder.body: "This source folder seems to be empty!"
+        holder.title : qsTr("No Tracks!")
+        holder.body: qsTr("This source folder seems to be empty!")
         holder.emojiSize: iconSizes.huge
 
         onExit:

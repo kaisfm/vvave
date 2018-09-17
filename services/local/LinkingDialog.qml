@@ -16,7 +16,7 @@ BabeDialog
     {
 
         if(ipField.text === link.deviceIp())
-            H.notify("Error", "Please provide a different IP address")
+            H.notify(qsTr("Error"), qsTr("Please provide a different IP address"))
         else
         {
             bae.saveSetting("LINKINGIP", ipField.text, "BABE")
@@ -98,7 +98,7 @@ BabeDialog
             {
                 id: linkState
                 checked: isLinked
-                text: isLinked ? qsTr("Linked to ")+ link.getIp(): "You're not linked"
+                text: isLinked ? qsTr("Linked to ")+ link.getIp(): qsTr("You're not linked")
                 enabled: false
             }
 
@@ -106,7 +106,7 @@ BabeDialog
             {
                 id: servingState
                 checked: isServing
-                text: isServing ? qsTr("Serving to ")+ link.getDeviceName() : "You're not serving"
+                text: isServing ? qsTr("Serving to ")+ link.getDeviceName() : qsTr("You're not serving")
                 enabled: false
             }
 

@@ -11,7 +11,7 @@ import "../../db/Queries.js" as Q
 
 BabeDialog
 {
-    title: "Add "+ tracks.length +" tracks to..."
+    title: qsTr("Add ")+ tracks.length + qsTr(" tracks to...")
     standardButtons: Dialog.Save | Dialog.Cancel
 
     property var tracks : []
@@ -29,7 +29,7 @@ BabeDialog
             Layout.fillWidth: true
 
             headBarVisible: false
-            holder.message: "<h2>There's not playlists</h2><br><p>Create a new one and start adding tracks to it<p/>"
+            holder.message: qsTr("<h2>There's not playlists</h2><p>Create a new one and start adding tracks to it<p/>")
             ListModel { id: listModel }
             model: listModel
 
