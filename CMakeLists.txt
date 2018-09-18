@@ -17,7 +17,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTORCC ON)
 
 add_executable(vvave
-    mauikit
     qml.qrc
     main.cpp
     babe.cpp
