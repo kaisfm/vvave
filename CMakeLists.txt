@@ -44,6 +44,7 @@ add_executable(vvave
     settings/fileloader.cpp
     utils/brain.cpp
     utils/babeconsole.cpp
+    translations/translations.qrc
     )
 
 if (ANDROID)
