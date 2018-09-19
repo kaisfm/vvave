@@ -22,8 +22,8 @@ sha256sums=('SKIP')
 #}
 
 prepare() {
-  lupdate vvave.pro
-  lrelease vvave.pro
+  lupdate $pkgname/vvave.pro
+  lrelease $pkgname/vvave.pro
   mkdir -p build
 }
 
