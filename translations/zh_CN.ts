@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
+    <name>AlbumsView</name>
+    <message>
+        <location filename="../widgets/AlbumsView.qml" line="72"/>
+        <source>Oops!</source>
+        <translation>哎呦！</translation>
+    </message>
+    <message>
+        <location filename="../widgets/AlbumsView.qml" line="73"/>
+        <source>This list is empty</source>
+        <translation>列表为空</translation>
+    </message>
+</context>
+<context>
     <name>BabeTable</name>
     <message>
         <location filename="../view_models/BabeTable/BabeTable.qml" line="100"/>
@@ -22,21 +35,20 @@
 <context>
     <name>BackButton</name>
     <message>
-        <location filename="../3rdparty/kirigami/src/controls/templates/private/BackButton.qml" line="50"/>
         <source>Navigate Back</source>
         <translatorcomment>注意：可能不用翻译</translatorcomment>
-        <translation>导航后退</translation>
+        <translation type="vanished">导航后退</translation>
     </message>
 </context>
 <context>
     <name>Browser</name>
     <message>
-        <location filename="../mauikit/src/fm/Browser.qml" line="86"/>
+        <location filename="../mauikit/src/controls/Browser.qml" line="86"/>
         <source>&lt;h3&gt;Folder is empty!&lt;/h3&gt;&lt;p&gt;You can add new files to it&lt;/p&gt;</source>
         <translation>&lt;h3&gt;文件夹为空！&lt;/h3&gt;&lt;p&gt;你可以在里面添加新文件&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/fm/Browser.qml" line="87"/>
+        <location filename="../mauikit/src/controls/Browser.qml" line="87"/>
         <source>&lt;h3&gt;Folder doesn&apos;t exists!&lt;/h3&gt;&lt;p&gt;Create Folder?&lt;/p&gt;</source>
         <translation>&lt;h3&gt;文件夹不存在&lt;/h3&gt;&lt;p&gt;创建该文件夹吗？&lt;/p&gt;</translation>
     </message>
@@ -44,30 +56,29 @@
 <context>
     <name>ContextDrawer</name>
     <message>
-        <location filename="../3rdparty/kirigami/src/controls/ContextDrawer.qml" line="77"/>
         <source>Actions</source>
-        <translation>操作</translation>
+        <translation type="vanished">操作</translation>
     </message>
 </context>
 <context>
     <name>FileDialog</name>
     <message>
-        <location filename="../mauikit/src/fm/FileDialog.qml" line="39"/>
+        <location filename="../mauikit/src/controls/FileDialog.qml" line="37"/>
         <source>New Folder</source>
         <translation>新文件夹</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/fm/FileDialog.qml" line="210"/>
+        <location filename="../mauikit/src/controls/FileDialog.qml" line="208"/>
         <source>Compact mode</source>
         <translation>简洁模式</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/fm/FileDialog.qml" line="216"/>
+        <location filename="../mauikit/src/controls/FileDialog.qml" line="214"/>
         <source>New folder</source>
         <translation>新文件夹</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/fm/FileDialog.qml" line="241"/>
+        <location filename="../mauikit/src/controls/FileDialog.qml" line="239"/>
         <source>File name</source>
         <translation>文件名</translation>
     </message>
@@ -93,22 +104,43 @@
 <context>
     <name>ForwardButton</name>
     <message>
-        <location filename="../3rdparty/kirigami/src/controls/templates/private/ForwardButton.qml" line="45"/>
         <source>Navigate Forward</source>
-        <translation>导航前进</translation>
+        <translation type="vanished">导航前进</translation>
     </message>
 </context>
 <context>
     <name>GlobalDrawer</name>
     <message>
-        <location filename="../3rdparty/kirigami/src/controls/GlobalDrawer.qml" line="340"/>
         <source>Back</source>
         <translatorcomment>注意：可能不用翻译</translatorcomment>
-        <translation>返回Back</translation>
+        <translation type="vanished">返回Back</translation>
     </message>
     <message>
         <source>About...</source>
         <translation type="vanished">关于...</translation>
+    </message>
+</context>
+<context>
+    <name>GroupDialog</name>
+    <message>
+        <location filename="../view_models/BabeTable/GroupDialog.qml" line="17"/>
+        <source>Artist</source>
+        <translation>艺人</translation>
+    </message>
+    <message>
+        <location filename="../view_models/BabeTable/GroupDialog.qml" line="22"/>
+        <source>Album</source>
+        <translation>专辑</translation>
+    </message>
+    <message>
+        <location filename="../view_models/BabeTable/GroupDialog.qml" line="27"/>
+        <source>Genre</source>
+        <translation>原唱</translation>
+    </message>
+    <message>
+        <location filename="../view_models/BabeTable/GroupDialog.qml" line="32"/>
+        <source>Stars</source>
+        <translation>星标</translation>
     </message>
 </context>
 <context>
@@ -168,11 +200,29 @@
     </message>
 </context>
 <context>
+    <name>InfoView</name>
+    <message>
+        <location filename="../widgets/InfoView/InfoView.qml" line="42"/>
+        <source>Couldn&apos;t find the lyrics!</source>
+        <translation>没能找到歌词！</translation>
+    </message>
+    <message>
+        <location filename="../widgets/InfoView/InfoView.qml" line="85"/>
+        <source>Couldn&apos;t find the wiki!</source>
+        <translation>没能找到该wiki！</translation>
+    </message>
+</context>
+<context>
     <name>LinkingDialog</name>
     <message>
         <location filename="../services/local/LinkingDialog.qml" line="19"/>
         <source>Please provide a different IP address</source>
         <translation>请提供一个不同的IP地址</translation>
+    </message>
+    <message>
+        <location filename="../services/local/LinkingDialog.qml" line="19"/>
+        <source>Error</source>
+        <translation>错误</translation>
     </message>
     <message>
         <location filename="../services/local/LinkingDialog.qml" line="52"/>
@@ -258,7 +308,7 @@
         <location filename="../services/local/LinkingListModel.qml" line="43"/>
         <location filename="../services/local/LinkingListModel.qml" line="94"/>
         <source>Babes</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../services/local/LinkingListModel.qml" line="44"/>
@@ -291,14 +341,12 @@
         <translation>原唱</translation>
     </message>
     <message>
-        <location filename="../services/local/LinkingListModel.qml" line="71"/>
         <source>select artist as tag from artists</source>
-        <translation>从艺人列表选择一个艺人作为标签</translation>
+        <translation type="vanished">从艺人列表选择一个艺人作为标签</translation>
     </message>
     <message>
-        <location filename="../services/local/LinkingListModel.qml" line="75"/>
         <source>select album as tag, artist from albums</source>
-        <translation>从专辑列表选择一个专辑作为标签</translation>
+        <translation type="vanished">从专辑列表选择一个专辑作为标签</translation>
     </message>
     <message>
         <source>stars</source>
@@ -333,9 +381,19 @@
         <translation>连接服务器错误</translation>
     </message>
     <message>
+        <location filename="../services/local/LinkingView.qml" line="216"/>
+        <source>Linking error</source>
+        <translation>链路错误</translation>
+    </message>
+    <message>
         <location filename="../services/local/LinkingView.qml" line="222"/>
         <source>The link is ready</source>
         <translation>连接就绪</translation>
+    </message>
+    <message>
+        <location filename="../services/local/LinkingView.qml" line="222"/>
+        <source>Linked!</source>
+        <translation>已连接！</translation>
     </message>
     <message>
         <location filename="../services/local/LinkingView.qml" line="229"/>
@@ -343,9 +401,66 @@
         <translation>客户端断开连接</translation>
     </message>
     <message>
+        <location filename="../services/local/LinkingView.qml" line="229"/>
+        <location filename="../services/local/LinkingView.qml" line="236"/>
+        <source>Unlinked!</source>
+        <translation>无连接！</translation>
+    </message>
+    <message>
         <location filename="../services/local/LinkingView.qml" line="236"/>
         <source>The server is disconnected</source>
         <translation>服务端断开连接</translation>
+    </message>
+</context>
+<context>
+    <name>LogginForm</name>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="77"/>
+        <source>email *</source>
+        <translation>邮箱 *</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="94"/>
+        <source>nick *</source>
+        <translation>昵称 *</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="94"/>
+        <source>nick or email</source>
+        <translation>昵称或邮箱</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="114"/>
+        <source>password *</source>
+        <translation>密码 *</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="136"/>
+        <source>name</source>
+        <translation>名字</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="151"/>
+        <source>lastname</source>
+        <translation>姓氏</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="174"/>
+        <source>Login</source>
+        <translation>登录</translation>
+    </message>
+    <message>
+        <location filename="../widgets/MyBeatView/LogginForm.qml" line="193"/>
+        <source>Singup</source>
+        <translation>注册</translation>
+    </message>
+</context>
+<context>
+    <name>LyricsView</name>
+    <message>
+        <location filename="../widgets/InfoView/LyricsView.qml" line="21"/>
+        <source>Nothing here</source>
+        <translation>无歌词</translation>
     </message>
 </context>
 <context>
@@ -517,7 +632,7 @@
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="49"/>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="93"/>
         <source>Babes</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="50"/>
@@ -528,7 +643,6 @@
     <message>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="51"/>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="103"/>
-        <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="104"/>
         <source>Tags</source>
         <translation>标签</translation>
     </message>
@@ -547,7 +661,6 @@
     <message>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="54"/>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="117"/>
-        <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="119"/>
         <source>Genres</source>
         <translation>原唱</translation>
     </message>
@@ -583,6 +696,20 @@
         <location filename="../widgets/SettingsView/SourcesDialog.qml" line="36"/>
         <source>Sources</source>
         <translation>源</translation>
+    </message>
+    <message>
+        <location filename="../widgets/SettingsView/SourcesDialog.qml" line="75"/>
+        <source>Are you sure you want to remove the source: 
+ </source>
+        <translation>你确定删除该源吗： 
+ </translation>
+    </message>
+    <message>
+        <location filename="../widgets/SettingsView/SourcesDialog.qml" line="80"/>
+        <source>
+is a default source and cannot be removed</source>
+        <translation>
+是缺省源不能被删除</translation>
     </message>
 </context>
 <context>
@@ -644,9 +771,8 @@
 <context>
     <name>ToolBarApplicationHeader</name>
     <message>
-        <location filename="../3rdparty/kirigami/src/controls/ToolBarApplicationHeader.qml" line="125"/>
         <source>More Actions</source>
-        <translation>更多操作</translation>
+        <translation type="vanished">更多操作</translation>
     </message>
 </context>
 <context>
@@ -679,6 +805,16 @@
         <source>Search results</source>
         <translation>搜索结果</translation>
     </message>
+    <message>
+        <location filename="../services/web/YouTube.qml" line="249"/>
+        <source>No Results!</source>
+        <translation>无结果！</translation>
+    </message>
+    <message>
+        <location filename="../services/web/YouTube.qml" line="250"/>
+        <source>Try with another query</source>
+        <translation>尝试用其他信息搜一下</translation>
+    </message>
 </context>
 <context>
     <name>main</name>
@@ -688,163 +824,193 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="197"/>
-        <location filename="../main.qml" line="366"/>
+        <location filename="../main.qml" line="157"/>
+        <source> by </source>
+        <translation> 主创 </translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="157"/>
+        <source> is missing</source>
+        <translation> 没找到</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="158"/>
+        <source>Do you want to remove it from your collection?</source>
+        <translation>你愿意将其从收藏中删除吗？</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="172"/>
+        <source>Missing file</source>
+        <translation>文件丢失</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="199"/>
+        <source>Now</source>
+        <translation>正在播放</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="215"/>
+        <location filename="../main.qml" line="388"/>
         <source>Tracks</source>
         <translatorcomment>目前主流翻译为歌曲，但考虑到可能乐曲、BGM等非歌唱形式采用中性翻译。</translatorcomment>
         <translation>曲目</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="202"/>
-        <location filename="../main.qml" line="372"/>
+        <location filename="../main.qml" line="221"/>
+        <location filename="../main.qml" line="394"/>
         <source>Albums</source>
         <translation>专辑</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="217"/>
-        <location filename="../main.qml" line="378"/>
+        <location filename="../main.qml" line="237"/>
+        <location filename="../main.qml" line="400"/>
         <source>Artists</source>
         <translatorcomment>目前主流翻译为歌手，但考虑到可能乐曲、BGM等非歌唱形式采用中性翻译。</translatorcomment>
         <translation>艺人</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="232"/>
+        <location filename="../main.qml" line="253"/>
         <source>Playlists</source>
         <translation>播放列表</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="299"/>
+        <location filename="../main.qml" line="310"/>
+        <source>Vvave Stream</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="321"/>
         <source>Folders</source>
         <translation>文件夹</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="310"/>
+        <location filename="../main.qml" line="332"/>
         <source>Linking</source>
         <translation>私网互联</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="322"/>
+        <location filename="../main.qml" line="344"/>
         <source>YouTube</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="333"/>
+        <location filename="../main.qml" line="355"/>
         <source>Spotify</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="343"/>
+        <location filename="../main.qml" line="365"/>
         <source>Collection</source>
         <translation>收藏</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="348"/>
+        <location filename="../main.qml" line="370"/>
         <source>Sources...</source>
         <translation>源...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="355"/>
+        <location filename="../main.qml" line="377"/>
         <source>Re-Scan</source>
         <translation>重新扫描</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="361"/>
+        <location filename="../main.qml" line="383"/>
         <source>Refresh...</source>
         <translation>刷新...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="384"/>
+        <location filename="../main.qml" line="406"/>
         <source>All</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="391"/>
+        <location filename="../main.qml" line="413"/>
         <source>Clean</source>
         <translation>清空</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="399"/>
+        <location filename="../main.qml" line="421"/>
         <source>Settings...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="422"/>
+        <location filename="../main.qml" line="444"/>
         <source>Appearance</source>
         <translation>外观</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="426"/>
+        <location filename="../main.qml" line="448"/>
         <source>Icon size</source>
         <translation>图标大小</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="461"/>
+        <location filename="../main.qml" line="483"/>
         <source>Player</source>
         <translation>播放器</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="465"/>
+        <location filename="../main.qml" line="487"/>
         <source>Info label</source>
         <translation>信息标签</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="469"/>
+        <location filename="../main.qml" line="491"/>
         <source>ON</source>
         <translation>开</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="469"/>
+        <location filename="../main.qml" line="491"/>
         <source>OFF</source>
         <translation>关</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="483"/>
+        <location filename="../main.qml" line="505"/>
         <source>Autoplay</source>
         <translation>自动播放</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="498"/>
+        <location filename="../main.qml" line="520"/>
         <source>Developer</source>
         <translation>开发人员</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="503"/>
+        <location filename="../main.qml" line="525"/>
         <source>Wiki</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="508"/>
+        <location filename="../main.qml" line="530"/>
         <source>Console log</source>
         <translation>控制台日志</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="515"/>
+        <location filename="../main.qml" line="537"/>
         <source>About...</source>
         <translation>关于...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="790"/>
+        <location filename="../main.qml" line="810"/>
         <source>No Albums!</source>
         <translation>没有专辑！</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="791"/>
-        <location filename="../main.qml" line="838"/>
+        <location filename="../main.qml" line="811"/>
+        <location filename="../main.qml" line="858"/>
         <source>Add new music sources</source>
         <translation>添加新音乐源</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="837"/>
+        <location filename="../main.qml" line="857"/>
         <source>No Artists!</source>
         <translation>没有艺人！</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="889"/>
+        <location filename="../main.qml" line="908"/>
         <source>Syncing to </source>
         <translation>同步到 </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="971"/>
+        <location filename="../main.qml" line="990"/>
         <source>Play all</source>
         <translation>播放全部</translation>
     </message>
