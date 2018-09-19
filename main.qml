@@ -198,6 +198,7 @@ Maui.ApplicationWindow
 
             text: qsTr("Now")
             tooltipText: pageStack.wideMode ? "" : text
+            visible: pageStack.wideMode ? false : true
         },
 
         Maui.ToolButton
