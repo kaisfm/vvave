@@ -184,7 +184,7 @@ Maui.ApplicationWindow
     headBarFGColor: altColorText
     headBarBGColor: currentView === viewsIndex.vvave ? "#7e57c2" : "#212121"
     colorSchemeName: "vvave"
-    altColorText: darkTextColor   
+    altColorText: darkTextColor
 
     headBar.middleContent : [
 
