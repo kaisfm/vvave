@@ -72,7 +72,7 @@ BabePopup
                     if(bae.defaultSources().indexOf(url)<0)
                     {
                         pathToRemove = url
-                        confirmationDialog.message = qsTr("Are you sure you want to remove the source: \n ") + rl
+                        confirmationDialog.message = qsTr("Are you sure you want to remove the source: \n ") + url
                     }
                     else
                     {
