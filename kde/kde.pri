@@ -13,7 +13,7 @@ SOURCES += \
     $$PWD/mpris2.cpp \
 
 RESOURCES += \
-    $$PWD/qtquickcontrols2.conf
+    $$PWD/maui-style.qrc 
 
 LIBS += -ltag
 
