@@ -120,7 +120,6 @@ int main(int argc, char *argv[])
 #endif
 
 #ifdef Q_OS_ANDROID
-    QIcon::setThemeName("Luv");
     QtWebView::initialize();
 #else
     //    if(QQuickStyle::availableStyles().contains("nomad"))

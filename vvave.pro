@@ -17,15 +17,16 @@ CONFIG += c++11
 linux:unix:!android {
     message(Building for Linux KDE)
     include(kde/kde.pri)
-    unix:!macx: LIBS += -lMauiKit
+    LIBS += -lMauiKit
 
 } else:android {
     message(Building helpers for Android)
-    include($$PWD/3rdparty/kirigami/kirigami.pri)
-    include($$PWD/3rdparty/taglib.pri)
+    QT += androidextras webview
 
+    include($$PWD/3rdparty/taglib.pri)
     include($$PWD/mauikit/mauikit.pri)
-    include($$PWD/android/android.pri)
+
+    include($$PWD/3rdparty/kirigami/kirigami.pri)
     include($$PWD/android-openssl.pri)
 
     DEFINES += STATIC_KIRIGAMI
