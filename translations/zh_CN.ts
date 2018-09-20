@@ -191,7 +191,7 @@
     <message>
         <location filename="../utils/Help.js" line="48"/>
         <source>Collection updated</source>
-        <translation>收藏已更新</translation>
+        <translation>曲库已更新</translation>
     </message>
     <message>
         <location filename="../utils/Help.js" line="48"/>
@@ -826,22 +826,22 @@ is a default source and cannot be removed</source>
     <message>
         <location filename="../main.qml" line="157"/>
         <source> by </source>
-        <translation> 主创 </translation>
+        <translation> 主创为 </translation>
     </message>
     <message>
         <location filename="../main.qml" line="157"/>
         <source> is missing</source>
-        <translation> 没找到</translation>
+        <translation> 的曲目文件缺失</translation>
     </message>
     <message>
         <location filename="../main.qml" line="158"/>
         <source>Do you want to remove it from your collection?</source>
-        <translation>你愿意将其从收藏中删除吗？</translation>
+        <translation>你愿意将其从曲库中删除吗？</translation>
     </message>
     <message>
         <location filename="../main.qml" line="172"/>
         <source>Missing file</source>
-        <translation>文件丢失</translation>
+        <translation>文件缺失</translation>
     </message>
     <message>
         <location filename="../main.qml" line="199"/>
@@ -901,7 +901,7 @@ is a default source and cannot be removed</source>
     <message>
         <location filename="../main.qml" line="365"/>
         <source>Collection</source>
-        <translation>收藏</translation>
+        <translation>曲库</translation>
     </message>
     <message>
         <location filename="../main.qml" line="370"/>
