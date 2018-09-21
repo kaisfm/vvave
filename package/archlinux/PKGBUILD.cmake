@@ -22,8 +22,8 @@ sha256sums=('SKIP')
 #}
 
 prepare() {
-  lupdate $pkgname/vvave.pro
-  lrelease $pkgname/vvave.pro
+  rm -rf $pkgname
+  git clone --recurse-submodules $source
   mkdir -p build
 }
 
