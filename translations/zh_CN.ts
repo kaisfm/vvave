@@ -4,12 +4,12 @@
 <context>
     <name>AlbumsView</name>
     <message>
-        <location filename="../widgets/AlbumsView.qml" line="72"/>
+        <location filename="../widgets/AlbumsView.qml" line="101"/>
         <source>Oops!</source>
         <translation>哎呦！</translation>
     </message>
     <message>
-        <location filename="../widgets/AlbumsView.qml" line="73"/>
+        <location filename="../widgets/AlbumsView.qml" line="102"/>
         <source>This list is empty</source>
         <translation>列表为空</translation>
     </message>
@@ -43,14 +43,12 @@
 <context>
     <name>Browser</name>
     <message>
-        <location filename="../mauikit/src/controls/Browser.qml" line="86"/>
         <source>&lt;h3&gt;Folder is empty!&lt;/h3&gt;&lt;p&gt;You can add new files to it&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;文件夹为空！&lt;/h3&gt;&lt;p&gt;你可以在里面添加新文件&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;文件夹为空！&lt;/h3&gt;&lt;p&gt;你可以在里面添加新文件&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/controls/Browser.qml" line="87"/>
         <source>&lt;h3&gt;Folder doesn&apos;t exists!&lt;/h3&gt;&lt;p&gt;Create Folder?&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;文件夹不存在&lt;/h3&gt;&lt;p&gt;创建该文件夹吗？&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;文件夹不存在&lt;/h3&gt;&lt;p&gt;创建该文件夹吗？&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -63,24 +61,20 @@
 <context>
     <name>FileDialog</name>
     <message>
-        <location filename="../mauikit/src/controls/FileDialog.qml" line="37"/>
         <source>New Folder</source>
-        <translation>新文件夹</translation>
+        <translation type="vanished">新文件夹</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/controls/FileDialog.qml" line="208"/>
         <source>Compact mode</source>
-        <translation>简洁模式</translation>
+        <translation type="vanished">简洁模式</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/controls/FileDialog.qml" line="214"/>
         <source>New folder</source>
-        <translation>新文件夹</translation>
+        <translation type="vanished">新文件夹</translation>
     </message>
     <message>
-        <location filename="../mauikit/src/controls/FileDialog.qml" line="239"/>
         <source>File name</source>
-        <translation>文件名</translation>
+        <translation type="vanished">文件名</translation>
     </message>
 </context>
 <context>
@@ -466,12 +460,12 @@
 <context>
     <name>MainPlaylist</name>
     <message>
-        <location filename="../widgets/MainPlaylist/MainPlaylist.qml" line="323"/>
+        <location filename="../widgets/MainPlaylist/MainPlaylist.qml" line="322"/>
         <source>Meh!</source>
         <translation>嗨！</translation>
     </message>
     <message>
-        <location filename="../widgets/MainPlaylist/MainPlaylist.qml" line="324"/>
+        <location filename="../widgets/MainPlaylist/MainPlaylist.qml" line="323"/>
         <source>Start putting together your playlist!</source>
         <translation>开始丰富你的歌单吧！</translation>
     </message>
@@ -685,9 +679,8 @@
 <context>
     <name>ShareDialog</name>
     <message>
-        <location filename="../mauikit/src/controls/ShareDialog.qml" line="31"/>
         <source>Open with...</source>
-        <translation>打开用...</translation>
+        <translation type="vanished">打开用...</translation>
     </message>
 </context>
 <context>
@@ -763,9 +756,8 @@ is a default source and cannot be removed</source>
 <context>
     <name>TagList</name>
     <message>
-        <location filename="../mauikit/src/controls/private/TagList.qml" line="23"/>
         <source>Add tags...</source>
-        <translation>添加标签...</translation>
+        <translation type="vanished">添加标签...</translation>
     </message>
 </context>
 <context>
@@ -844,173 +836,183 @@ is a default source and cannot be removed</source>
         <translation>文件缺失</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="199"/>
+        <location filename="../main.qml" line="197"/>
         <source>Now</source>
         <translation>正在播放</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="215"/>
-        <location filename="../main.qml" line="388"/>
+        <location filename="../main.qml" line="212"/>
+        <location filename="../main.qml" line="379"/>
         <source>Tracks</source>
         <translatorcomment>目前主流翻译为歌曲，但考虑到可能乐曲、BGM等非歌唱形式采用中性翻译。</translatorcomment>
         <translation>曲目</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="221"/>
-        <location filename="../main.qml" line="394"/>
+        <location filename="../main.qml" line="218"/>
+        <location filename="../main.qml" line="385"/>
         <source>Albums</source>
         <translation>专辑</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="237"/>
-        <location filename="../main.qml" line="400"/>
+        <location filename="../main.qml" line="232"/>
+        <location filename="../main.qml" line="391"/>
         <source>Artists</source>
         <translatorcomment>目前主流翻译为歌手，但考虑到可能乐曲、BGM等非歌唱形式采用中性翻译。</translatorcomment>
         <translation>艺人</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="253"/>
+        <location filename="../main.qml" line="246"/>
         <source>Playlists</source>
         <translation>播放列表</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="310"/>
+        <location filename="../main.qml" line="301"/>
         <source>Vvave Stream</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="321"/>
+        <location filename="../main.qml" line="312"/>
         <source>Folders</source>
         <translation>文件夹</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="332"/>
+        <location filename="../main.qml" line="323"/>
         <source>Linking</source>
         <translation>私网互联</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="344"/>
+        <location filename="../main.qml" line="335"/>
         <source>YouTube</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="355"/>
+        <location filename="../main.qml" line="346"/>
         <source>Spotify</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="365"/>
+        <location filename="../main.qml" line="356"/>
         <source>Collection</source>
         <translation>曲库</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="370"/>
+        <location filename="../main.qml" line="361"/>
         <source>Sources...</source>
         <translation>源...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="377"/>
+        <location filename="../main.qml" line="368"/>
         <source>Re-Scan</source>
         <translation>重新扫描</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="383"/>
+        <location filename="../main.qml" line="374"/>
         <source>Refresh...</source>
         <translation>刷新...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="406"/>
+        <location filename="../main.qml" line="397"/>
         <source>All</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="413"/>
+        <location filename="../main.qml" line="404"/>
         <source>Clean</source>
         <translation>清空</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="421"/>
+        <location filename="../main.qml" line="412"/>
         <source>Settings...</source>
         <translation>设置...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="444"/>
+        <location filename="../main.qml" line="435"/>
         <source>Appearance</source>
         <translation>外观</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="448"/>
+        <location filename="../main.qml" line="439"/>
         <source>Icon size</source>
         <translation>图标大小</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="483"/>
+        <location filename="../main.qml" line="474"/>
         <source>Player</source>
         <translation>播放器</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="487"/>
+        <location filename="../main.qml" line="478"/>
         <source>Info label</source>
         <translation>信息标签</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="491"/>
+        <location filename="../main.qml" line="482"/>
         <source>ON</source>
         <translation>开</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="491"/>
+        <location filename="../main.qml" line="482"/>
         <source>OFF</source>
         <translation>关</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="505"/>
+        <location filename="../main.qml" line="496"/>
         <source>Autoplay</source>
         <translation>自动播放</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="520"/>
+        <location filename="../main.qml" line="511"/>
         <source>Developer</source>
         <translation>开发人员</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="525"/>
+        <location filename="../main.qml" line="516"/>
         <source>Wiki</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="530"/>
+        <location filename="../main.qml" line="521"/>
         <source>Console log</source>
         <translation>控制台日志</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="537"/>
+        <location filename="../main.qml" line="528"/>
         <source>About...</source>
         <translation>关于...</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="810"/>
+        <location filename="../main.qml" line="801"/>
         <source>No Albums!</source>
         <translation>没有专辑！</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="811"/>
-        <location filename="../main.qml" line="858"/>
+        <location filename="../main.qml" line="802"/>
+        <location filename="../main.qml" line="850"/>
         <source>Add new music sources</source>
         <translation>添加新音乐源</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="857"/>
+        <location filename="../main.qml" line="804"/>
+        <source> albums</source>
+        <translation> 专辑</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="849"/>
         <source>No Artists!</source>
         <translation>没有艺人！</translation>
     </message>
     <message>
-        <location filename="../main.qml" line="908"/>
+        <location filename="../main.qml" line="852"/>
+        <source> artists</source>
+        <translation> 艺人</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="901"/>
         <source>Syncing to </source>
         <translation>同步到 </translation>
     </message>
     <message>
-        <location filename="../main.qml" line="990"/>
+        <location filename="../main.qml" line="983"/>
         <source>Play all</source>
         <translation>播放全部</translation>
     </message>
