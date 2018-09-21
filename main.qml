@@ -801,7 +801,7 @@ Maui.ApplicationWindow
                     grid.holder.title : qsTr("No Albums!")
                     grid.holder.body: qsTr("Add new music sources")
                     grid.holder.emojiSize: iconSizes.huge
-                    grid.headBarTitle: grid.grid.count + qsTr(" abums")
+                    grid.headBarTitle: grid.grid.count + qsTr(" albums")
 
                     Connections
                     {
