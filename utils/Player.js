@@ -50,7 +50,7 @@ function queueTracks(tracks)
             onQueue++
             console.log(onQueue)
             appendTracksAt(tracks, currentTrackIndex+1)
-            bae.notify("Queue", tracks.length + " tracks added put on queue")
+            bae.notify(qsTr("Queue"), tracks.length + qsTr(" tracks added put on queue"))
         }
     }
 }
