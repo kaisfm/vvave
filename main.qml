@@ -154,8 +154,8 @@ Maui.ApplicationWindow
     //    }
     onMissingAlert:
     {
-        missingDialog.message = track.title + " by " + track.artist + " is missing"
-        missingDialog.messageBody = "Do you want to remove it from your collection?"
+        missingDialog.message = track.title + qsTr(" by ") + track.artist + qsTr(" is missing")
+        missingDialog.messageBody = qsTr("Do you want to remove it from your collection?")
         missingDialog.open()
     }
 
@@ -169,7 +169,7 @@ Maui.ApplicationWindow
     {
         id: missingDialog
         width: parent.width * (isMobile ? 0.9 : 0.4)
-        title: "Missing file"
+        title: qsTr("Missing file")
         onAccepted: {
             bae.removeTrack(currentTrack.url)
             mainPlaylist.table.model.remove(mainPlaylist.table.currentIndex)
@@ -195,6 +195,7 @@ Maui.ApplicationWindow
             onClicked: pageStack.currentIndex = 0
 
             text: qsTr("Now")
+            visible: pageStack.wideMode ? false : true
         },
 
         Maui.ToolButton
@@ -296,7 +297,7 @@ Maui.ApplicationWindow
 
         Kirigami.Action
         {
-            text: "Vvave Stream"
+            text: qsTr("Vvave Stream")
             iconName: "love"
             onTriggered:
             {
@@ -430,11 +431,11 @@ Maui.ApplicationWindow
 
             Kirigami.Action
             {
-                text: "Appearance"
+                text: qsTr("Appearance")
 
                 Kirigami.Action
                 {
-                    text: "Icon size"
+                    text: qsTr("Icon size")
                     Kirigami.Action
                     {
                         text: iconSizes.small
@@ -469,15 +470,15 @@ Maui.ApplicationWindow
 
             Kirigami.Action
             {
-                text: "Player"
+                text: qsTr("Player")
 
                 Kirigami.Action
                 {
-                    text: "Info label"
+                    text: qsTr("Info label")
 
                     Kirigami.Action
                     {
-                        text: checked ? "ON" : "OFF"
+                        text: checked ? qsTr("ON") : qsTr("OFF")
                         checked: infoLabels
                         checkable: true
                         onToggled:
@@ -491,7 +492,7 @@ Maui.ApplicationWindow
 
                 Kirigami.Action
                 {
-                    text: "Autoplay"
+                    text: qsTr("Autoplay")
                     checked: autoplay
                     checkable: true
                     onToggled:
@@ -506,24 +507,24 @@ Maui.ApplicationWindow
 
         Kirigami.Action
         {
-            text: "Developer"
+            text: qsTr("Developer")
             iconName: "code-context"
 
             Kirigami.Action
             {
-                text: "Wiki"
+                text: qsTr("Wiki")
             }
 
             Kirigami.Action
             {
-                text: "Console log"
+                text: qsTr("Console log")
                 onTriggered: babeConsole.open()
             }
         },
 
         Kirigami.Action
         {
-            text: "About..."
+            text: qsTr("About...")
             iconName: "help-about"
 
             Kirigami.Action
@@ -796,10 +797,10 @@ Maui.ApplicationWindow
 
                     grid.holder.emoji: "qrc:/assets/MusicBox.png"
                     grid.holder.isMask: false
-                    grid.holder.title : "No Albums!"
-                    grid.holder.body: "Add new music sources"
+                    grid.holder.title : qsTr("No Albums!")
+                    grid.holder.body: qsTr("Add new music sources")
                     grid.holder.emojiSize: iconSizes.huge
-                    grid.headBarTitle: grid.grid.count + qsTr(" abums")
+                    grid.headBarTitle: grid.grid.count + qsTr(" albums")
 
                     Connections
                     {
@@ -844,8 +845,8 @@ Maui.ApplicationWindow
 
                     grid.holder.emoji: "qrc:/assets/MusicBox.png"
                     grid.holder.isMask: false
-                    grid.holder.title : "No Artists!"
-                    grid.holder.body: "Add new music sources"
+                    grid.holder.title : qsTr("No Artists!")
+                    grid.holder.body: qsTr("Add new music sources")
                     grid.holder.emojiSize: iconSizes.huge
                     grid.headBarTitle: grid.grid.count + qsTr(" artists")
 
@@ -896,7 +897,7 @@ Maui.ApplicationWindow
                             Player.playAll(tracks)
                             root.sync = true
                             root.syncPlaylist = playlist
-                            root.infoMsg = "Syncing to " + playlist
+                            root.infoMsg = qsTr("Syncing to ") + playlist
                         }
                     }
                 }
