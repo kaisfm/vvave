@@ -10,7 +10,7 @@ import "../../db/Queries.js" as Q
 
 Maui.Dialog
 {
-    title: "Add "+ tracks.length +" tracks to..."
+    title: qsTr("Add ")+ tracks.length + qsTr(" tracks to...")
 
     property var tracks : []
     maxHeight: 400 * unit
@@ -27,7 +27,7 @@ Maui.Dialog
             Layout.fillWidth: true
 
             headBarVisible: false
-            holder.message: "<h2>There's not playlists</h2><br><p>Create a new one and start adding tracks to it<p/>"
+            holder.message: qsTr("<h2>There's not playlists</h2><p>Create a new one and start adding tracks to it<p/>")
             ListModel { id: listModel }
             model: listModel
 
