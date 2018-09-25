@@ -14,7 +14,6 @@ import "widgets/SettingsView"
 import "widgets/SearchView"
 
 import "view_models"
-import "view_models/BabeDialog"
 import "view_models/BabeTable"
 
 import "services/local"
@@ -48,6 +47,8 @@ Maui.ApplicationWindow
     property alias mainPlaylist: mainPlaylist
     property alias selectionBar: selectionBar
 
+    about.appIcon: "qrc:/assets/vvave.svg"
+    about.appDescription: qsTr("VVAVE will handle your whole music collection by retreaving semantic information from the web. Just relax, enjoy and discover your new music ")
     /***************************************************/
     /******************** PLAYBACK ********************/
     /*************************************************/
@@ -165,10 +166,9 @@ Maui.ApplicationWindow
         id: babeNotify
     }
 
-    BabeMessage
+    Maui.Dialog
     {
         id: missingDialog
-        width: parent.width * (isMobile ? 0.9 : 0.4)
         title: qsTr("Missing file")
         onAccepted: {
             bae.removeTrack(currentTrack.url)
@@ -193,7 +193,6 @@ Maui.ApplicationWindow
             iconName: "headphones"
             iconColor: !accent ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
-
             onClicked: pageStack.currentIndex = 0
 
             text: qsTr("Now")
@@ -205,7 +204,7 @@ Maui.ApplicationWindow
             iconName: "view-media-track"
             iconColor:  accent && currentView === viewsIndex.tracks ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
-            
+
             onClicked:
             {
                 pageStack.currentIndex = 1
@@ -222,7 +221,7 @@ Maui.ApplicationWindow
             iconName: /*"album"*/ "view-media-album-cover"
             iconColor:  accent && currentView === viewsIndex.albums ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
-            
+
             onClicked:
             {
                 pageStack.currentIndex = 1
@@ -238,7 +237,7 @@ Maui.ApplicationWindow
             iconName: "view-media-artist"
             iconColor:  accent && currentView === viewsIndex.artists ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
-            
+
             onClicked:
             {
                 pageStack.currentIndex = 1
@@ -254,7 +253,7 @@ Maui.ApplicationWindow
             iconName: "view-media-playlist"
             iconColor:  accent && currentView === viewsIndex.playlists ? babeColor : altColorText
             display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
-            
+
             onClicked:
             {
                 pageStack.currentIndex = 1
