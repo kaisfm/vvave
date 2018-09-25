@@ -47,7 +47,8 @@ add_executable(vvave
     )
 
 if (ANDROID)
-    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras WebView)
+    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras WebView Xml)
+    find_package(OpenSSL REQUIRED)
 
     include(ExternalProject)
     externalproject_add(taglib
@@ -57,13 +58,9 @@ if (ANDROID)
     set(TAGLIB_INCLUDE_DIRS ${CMAKE_INSTALL_PREFIX}/include ${CMAKE_INSTALL_PREFIX}/include/taglib)
     set(TAGLIB_LIBRARIES ${CMAKE_INSTALL_PREFIX}/${LIB_INSTALL_DIR}/libtag.a)
 
-    target_sources(vvave PRIVATE
-        android/notificationclient.cpp
-        android/android.qrc
-        )
-    target_link_libraries(vvave Qt5::AndroidExtras Qt5::WebView)
+    target_link_libraries(vvave Qt5::AndroidExtras Qt5::WebView Qt5::Xml OpenSSL::SSL)
     add_dependencies(vvave taglib)
-    kde_source_files_enable_exceptions(vvave android/android.cpp android/notificationclient.cpp babe.cpp)
+    kde_source_files_enable_exceptions(vvave babe.cpp)
 else()
     find_package(Taglib REQUIRED)
     find_package(Qt5 REQUIRED COMPONENTS WebEngine)
@@ -80,7 +77,9 @@ target_link_libraries(vvave Qt5::Network Qt5::Sql Qt5::WebSockets Qt5::Qml Qt5::
 
 install(TARGETS vvave ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES org.kde.vvave.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-install(FILES assets/vvave.svg DESTINATION /usr/share/icons/hicolor/scalable/apps)
+
+#TODO: port to ecm_install_icons()
+install(FILES assets/vvave.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 install(FILES org.kde.vvave.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
