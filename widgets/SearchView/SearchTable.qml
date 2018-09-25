@@ -30,8 +30,8 @@ BabeTable
     headBarExitIcon: "edit-clear"
     holder.emoji: "qrc:/assets/BugSearch.png"
     holder.isMask: false
-    holder.title : qsTr("No search results!")
-    holder.body: qsTr("Try with another query")
+    holder.title : "No search results!"
+    holder.body: "Try with another query"
     holder.emojiSize: iconSizes.huge
     coverArtVisible: true
     trackDuration: true
