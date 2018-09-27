@@ -196,6 +196,7 @@ Maui.ApplicationWindow
             onClicked: pageStack.currentIndex = 0
 
             text: qsTr("Now")
+            tooltipText: pageStack.wideMode ? "" : text
             visible: pageStack.wideMode ? false : true
         },
 
