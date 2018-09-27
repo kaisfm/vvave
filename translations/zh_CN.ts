@@ -129,7 +129,7 @@
     <message>
         <location filename="../view_models/BabeTable/GroupDialog.qml" line="27"/>
         <source>Genre</source>
-        <translation>原唱</translation>
+        <translation>曲风</translation>
     </message>
     <message>
         <location filename="../view_models/BabeTable/GroupDialog.qml" line="32"/>
@@ -332,7 +332,7 @@
         <location filename="../services/local/LinkingListModel.qml" line="48"/>
         <location filename="../services/local/LinkingListModel.qml" line="118"/>
         <source>Genres</source>
-        <translation>原唱</translation>
+        <translation>曲风</translation>
     </message>
     <message>
         <source>select artist as tag from artists</source>
@@ -656,7 +656,7 @@
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="54"/>
         <location filename="../widgets/PlaylistsView/PlaylistsViewModel.qml" line="117"/>
         <source>Genres</source>
-        <translation>原唱</translation>
+        <translation>曲风</translation>
     </message>
     <message>
         <source>stars</source>
