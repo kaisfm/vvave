@@ -16,11 +16,14 @@ BabeList
 
     headBarExit: false
     headBarTitle: qsTr("Playlists")
+
     Maui.NewDialog
     {
         id: newPlaylistDialog
         title: qsTr("New Plasylist...")
         onFinished: addPlaylist(text)
+        acceptText: qsTr("Create")
+        rejectButton.visible: false
     }
 
     signal playSync(int index)   
@@ -80,23 +83,19 @@ BabeList
                     break;
 
                 case qsTr("Favorites"):
-
                     filterList.section.property = "stars"
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
                 case qsTr("Recent"):
-
                     playlistViewRoot.populate(Q.GET.recentTracks);
                     break;
 
                 case qsTr("Babes"):
-
                     playlistViewRoot.populate(Q.GET.babedTracks);
                     break;
 
                 case qsTr("Online"):
-
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
@@ -105,22 +104,18 @@ BabeList
                     break;
 
                 case qsTr("Relationships"):
-
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
                 case qsTr("Popular"):
-
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
                 case qsTr("Genres"):
-
                     populateExtra(Q.GET.genres, "Genres")
                     break;
 
                 default:
-
                     playlistViewRoot.populate(Q.GET.playlistTracks_.arg(playlist));
                     break;
 
