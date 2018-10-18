@@ -15,12 +15,12 @@ BabeList
     id: playlistListRoot
 
     headBarExit: false
-    headBarTitle: qsTr("Playlists")
+    headBarTitle: "Playlists"
 
     Maui.NewDialog
     {
         id: newPlaylistDialog
-        title: qsTr("New Plasylist...")
+        title: qsTr("New Playlist...")
         onFinished: addPlaylist(text)
         acceptText: qsTr("Create")
         rejectButton.visible: false
@@ -77,41 +77,41 @@ BabeList
 
                 switch(playlist)
                 {
-                case qsTr("Most Played"):
+                case "Most Played":
 
                     playlistViewRoot.populate(Q.GET.mostPlayedTracks);
                     break;
 
-                case qsTr("Favorites"):
+                case "Favorites":
                     filterList.section.property = "stars"
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case qsTr("Recent"):
+                case "Recent":
                     playlistViewRoot.populate(Q.GET.recentTracks);
                     break;
 
-                case qsTr("Babes"):
+                case "Babes":
                     playlistViewRoot.populate(Q.GET.babedTracks);
                     break;
 
-                case qsTr("Online"):
+                case "Online":
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case qsTr("Tags"):
+                case "Tags":
                     populateExtra(Q.GET.tags, "Tags")
                     break;
 
-                case qsTr("Relationships"):
+                case "Relationships":
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case qsTr("Popular"):
+                case "Popular":
                     playlistViewRoot.populate(Q.GET.favoriteTracks);
                     break;
 
-                case qsTr("Genres"):
+                case "Genres":
                     populateExtra(Q.GET.genres, "Genres")
                     break;
 

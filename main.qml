@@ -155,8 +155,8 @@ Maui.ApplicationWindow
     //    }
     onMissingAlert:
     {
-        missingDialog.message = track.title + qsTr(" by ") + track.artist + qsTr(" is missing")
-        missingDialog.messageBody = qsTr("Do you want to remove it from your collection?")
+        missingDialog.message = track.title + " by " + track.artist + " is missing"
+        missingDialog.messageBody = "Do you want to remove it from your collection?"
         missingDialog.open()
     }
 
@@ -169,7 +169,7 @@ Maui.ApplicationWindow
     Maui.Dialog
     {
         id: missingDialog
-        title: qsTr("Missing file")
+        title: "Missing file"
         onAccepted: {
             bae.removeTrack(currentTrack.url)
             mainPlaylist.table.model.remove(mainPlaylist.table.currentIndex)
@@ -195,8 +195,6 @@ Maui.ApplicationWindow
             onClicked: pageStack.currentIndex = 0
 
             text: qsTr("Now")
-            tooltipText: pageStack.wideMode ? "" : text
-            visible: pageStack.wideMode ? false : true
         },
 
         Maui.ToolButton
@@ -296,7 +294,7 @@ Maui.ApplicationWindow
 
         Maui.MenuItem
         {
-            text: qsTr("Vvave Stream")
+            text: "Vvave Stream"
             onTriggered:
             {
                 pageStack.currentIndex = 1
@@ -402,7 +400,7 @@ Maui.ApplicationWindow
 
             Maui.MenuItem
             {
-                text: qsTr("Info label") + checked ? qsTr("ON") : qsTr("OFF")
+                text: "Info label" + checked ? "ON" : "OFF"
                 checked: infoLabels
                 checkable: true
                 onToggled:
@@ -415,7 +413,7 @@ Maui.ApplicationWindow
 
             Maui.MenuItem
             {
-                text: qsTr("Autoplay")
+                text: "Autoplay"
                 checked: autoplay
                 checkable: true
                 onToggled:
@@ -675,10 +673,10 @@ Maui.ApplicationWindow
 
                     holder.emoji: "qrc:/assets/MusicBox.png"
                     holder.isMask: false
-                    holder.title : qsTr("No Albums!")
-                    holder.body: qsTr("Add new music sources")
+                    holder.title : "No Albums!"
+                    holder.body: "Add new music sources"
                     holder.emojiSize: iconSizes.huge
-                    headBarTitle: count + qsTr(" albums")
+                    headBarTitle: count + qsTr(" abums")
 
                     Connections
                     {
@@ -723,8 +721,8 @@ Maui.ApplicationWindow
 
                     holder.emoji: "qrc:/assets/MusicBox.png"
                     holder.isMask: false
-                    holder.title : qsTr("No Artists!")
-                    holder.body: qsTr("Add new music sources")
+                    holder.title : "No Artists!"
+                    holder.body: "Add new music sources"
                     holder.emojiSize: iconSizes.huge
                     headBarTitle: count + qsTr(" artists")
 
@@ -775,7 +773,7 @@ Maui.ApplicationWindow
                             Player.playAll(tracks)
                             root.sync = true
                             root.syncPlaylist = playlist
-                            root.infoMsg = qsTr("Syncing to ") + playlist
+                            root.infoMsg = "Syncing to " + playlist
                         }
                     }
                 }
