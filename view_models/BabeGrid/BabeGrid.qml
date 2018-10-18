@@ -13,11 +13,12 @@ Maui.Page
     property int albumCoverSize: iconSizes.enormous
     readonly property int albumSpacing: albumCoverSize * 0.3 + space.small
 
-    property int albumCoverRadius :  Kirigami.Units.devicePixelRatio * 6
+    property int albumCoverRadius :  radiusV
     property bool albumCardVisible : true
     property alias gridModel: gridModel
     property alias grid: grid
     property alias holder: holder
+    property alias count: grid.count
 
     signal albumCoverClicked(string album, string artist)
     signal albumCoverPressed(string album, string artist)
@@ -25,8 +26,6 @@ Maui.Page
 
     margins: space.medium
     topMargin: space.big
-
-    onWidthChanged: grid.forceLayout()
 
     function clearGrid()
     {
