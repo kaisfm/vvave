@@ -192,6 +192,7 @@ Maui.ApplicationWindow
         {
             iconName: "headphones"
             iconColor: !accent ? babeColor : altColorText
+            display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
             onClicked: pageStack.currentIndex = 0
 
             text: qsTr("Now")
@@ -203,6 +204,7 @@ Maui.ApplicationWindow
         {
             iconName: "view-media-track"
             iconColor:  accent && currentView === viewsIndex.tracks ? babeColor : altColorText
+            display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
             onClicked:
             {
                 pageStack.currentIndex = 1
@@ -218,6 +220,7 @@ Maui.ApplicationWindow
             text: qsTr("Albums")
             iconName: /*"album"*/ "view-media-album-cover"
             iconColor:  accent && currentView === viewsIndex.albums ? babeColor : altColorText
+            display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
             onClicked:
             {
                 pageStack.currentIndex = 1
@@ -231,6 +234,7 @@ Maui.ApplicationWindow
             text: qsTr("Artists")
             iconName: "view-media-artist"
             iconColor:  accent && currentView === viewsIndex.artists ? babeColor : altColorText
+            display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
             onClicked:
             {
                 pageStack.currentIndex = 1
@@ -244,6 +248,7 @@ Maui.ApplicationWindow
             text: qsTr("Playlists")
             iconName: "view-media-playlist"
             iconColor:  accent && currentView === viewsIndex.playlists ? babeColor : altColorText
+            display: pageStack.wideMode ? AbstractButton.TextBesideIcon : AbstractButton.IconOnly
             onClicked:
             {
                 pageStack.currentIndex = 1
