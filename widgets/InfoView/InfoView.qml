@@ -17,7 +17,6 @@ Page
 
     clip: true
 
-
     SwipeView
     {
         id: infoSwipeView
@@ -36,8 +35,7 @@ Page
             Maui.Holder
             {
                 id: lyricsHolder
-                fgColor: darkTextColor
-//                anchors.fill: parent
+                colorScheme.textColor: darkTextColor
                 visible: lyricsText.text.length > 0 ? false : true
                 message: qsTr("Couldn't find the lyrics!")
             }
@@ -182,10 +180,7 @@ Page
                         wrapMode: Text.Wrap
                     }
                 }
-
             }
         }
-
     }
-
 }
