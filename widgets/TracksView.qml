@@ -11,7 +11,7 @@ BabeTable
     trackNumberVisible: false
     trackDuration: true
     trackRating: true
-    headBar.Visible: !holder.visible
+    headBar.visible: !holder.visible
     headBarTitle: count + qsTr(" tracks")
     headBarExit: false
     coverArtVisible: false
